@@ -1,0 +1,91 @@
+body {
+  background-image: url("https://i.pinimg.com/564x/e9/39/b3/e939b345332af902f08968a6805e99b1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.navbar,
+.footer {
+  background-color: #ff0000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand,
+.nav-link {
+  color: #ffffff !important;
+}
+
+.jumbotron {
+  background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQjeVdxOGImlZyDUrkJkZfoLoa6hSWjnB6ZN4GlLD5WrnLLsEOnI_5Q0LoLTCUmI9GZqB2InWc_CBp_omHAXobAnL_t1DbIidUaUcUCYXaOcTJJrsSZajLFNID6V1pUYnfGqK5LyLvejIV/s640/Background+HUT+RI+terbaru+6.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.alliv {
+  transform: scale(1);
+  transition: transform 0.5s ease-in;
+}
+
+.alliv:hover {
+  transform: scale(1.2);
+}
+
+.card {
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.card-body {
+  position: relative;
+  border-radius: 8px;
+}
+
+.card-body h2,
+.card-body h3 {
+  color: #ff0000;
+}
+
+.btn-primary {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b30000;
+  transform: scale(1.05);
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffeb3b !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer {
+  background-color: #ff0000;
+}
+
+.supported-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer p:hover {
+  color: #ffeb3b;
+}
