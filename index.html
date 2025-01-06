@@ -9,20 +9,26 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
       body {
+        font-family: Arial, sans-serif;
         background-color: #f5f5f5;
         color: #333;
       }
       .navbar {
-        background-color: #002366; /* Blue */
+        background-color: #002366;
       }
-      .navbar-brand, .nav-link {
+      .navbar-brand,
+      .nav-link {
         color: white !important;
       }
       .hero-section {
-        background: linear-gradient(to right, #002366, #ff0000); /* Blue to Red */
+        background: linear-gradient(to right, #002366, #ff0000);
         color: white;
         padding: 5rem 0;
         text-align: center;
+      }
+      .carousel-item img {
+        height: 400px;
+        object-fit: cover;
       }
       .card {
         background-color: white;
@@ -30,13 +36,13 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
       footer {
-        background-color: #002366; /* Blue */
+        background-color: #002366;
         color: white;
         padding: 2rem 0;
         text-align: center;
       }
       footer a {
-        color: #ff0000 !important; /* Red */
+        color: #ff0000 !important;
       }
     </style>
   </head>
@@ -83,34 +89,44 @@
 
       <section id="projects" class="mb-5">
         <h2 class="text-center text-danger mb-4">Projects</h2>
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card" data-aos="fade-up">
-              <img src="project1.jpg" class="card-img-top" alt="Project 1" />
-              <div class="card-body">
-                <h5 class="card-title">Project 1</h5>
-                <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card">
+                <img src="project1.jpg" class="card-img-top" alt="Project 1" />
+                <div class="card-body">
+                  <h5 class="card-title">Project 1</h5>
+                  <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="project2.jpg" class="card-img-top" alt="Project 2" />
+                <div class="card-body">
+                  <h5 class="card-title">Project 2</h5>
+                  <p class="card-text">A dynamic web app developed using React.js.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="project3.jpg" class="card-img-top" alt="Project 3" />
+                <div class="card-body">
+                  <h5 class="card-title">Project 3</h5>
+                  <p class="card-text">A robust back-end system created with Django.</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card" data-aos="fade-up">
-              <img src="project2.jpg" class="card-img-top" alt="Project 2" />
-              <div class="card-body">
-                <h5 class="card-title">Project 2</h5>
-                <p class="card-text">A dynamic web app developed using React.js.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card" data-aos="fade-up">
-              <img src="project3.jpg" class="card-img-top" alt="Project 3" />
-              <div class="card-body">
-                <h5 class="card-title">Project 3</h5>
-                <p class="card-text">A robust back-end system created with Django.</p>
-              </div>
-            </div>
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
 
