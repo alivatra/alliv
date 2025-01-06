@@ -35,6 +35,16 @@
         border: none;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
+      .skill-card {
+        text-align: center;
+        padding: 1rem;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .skill-card img {
+        width: 50px;
+        margin-bottom: 0.5rem;
+      }
       footer {
         background-color: #002366;
         color: white;
@@ -93,7 +103,9 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="card">
-                <img src="project1.jpg" class="card-img-top" alt="Project 1" />
+                <a href="project1.html">
+                  <img src="project1.jpg" class="card-img-top" alt="Project 1" />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Project 1</h5>
                   <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
@@ -102,7 +114,9 @@
             </div>
             <div class="carousel-item">
               <div class="card">
-                <img src="project2.jpg" class="card-img-top" alt="Project 2" />
+                <a href="project2.html">
+                  <img src="project2.jpg" class="card-img-top" alt="Project 2" />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Project 2</h5>
                   <p class="card-text">A dynamic web app developed using React.js.</p>
@@ -111,7 +125,9 @@
             </div>
             <div class="carousel-item">
               <div class="card">
-                <img src="project3.jpg" class="card-img-top" alt="Project 3" />
+                <a href="project3.html">
+                  <img src="project3.jpg" class="card-img-top" alt="Project 3" />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title">Project 3</h5>
                   <p class="card-text">A robust back-end system created with Django.</p>
@@ -132,26 +148,48 @@
 
       <section id="skills" class="mb-5">
         <h2 class="text-center text-danger mb-4">Skills</h2>
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <h4>HTML</h4>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="skill-card">
+              <img src="html-logo.png" alt="HTML Logo" />
+              <h5>HTML</h5>
+            </div>
           </div>
-          <div class="col-md-3 text-center">
-            <h4>CSS</h4>
+          <div class="col">
+            <div class="skill-card">
+              <img src="css-logo.png" alt="CSS Logo" />
+              <h5>CSS</h5>
+            </div>
           </div>
-          <div class="col-md-3 text-center">
-            <h4>Bootstrap</h4>
+          <div class="col">
+            <div class="skill-card">
+              <img src="bootstrap-logo.png" alt="Bootstrap Logo" />
+              <h5>Bootstrap</h5>
+            </div>
           </div>
-          <div class="col-md-3 text-center">
-            <h4>React.js</h4>
+          <div class="col">
+            <div class="skill-card">
+              <img src="react-logo.png" alt="React Logo" />
+              <h5>React.js</h5>
+            </div>
           </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-md-6 text-center">
-            <h4>JavaScript</h4>
+          <div class="col">
+            <div class="skill-card">
+              <img src="javascript-logo.png" alt="JavaScript Logo" />
+              <h5>JavaScript</h5>
+            </div>
           </div>
-          <div class="col-md-6 text-center">
-            <h4>Django</h4>
+          <div class="col">
+            <div class="skill-card">
+              <img src="django-logo.png" alt="Django Logo" />
+              <h5>Django</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="skill-card">
+              <img src="3d-modeling-logo.png" alt="3D Modeling Logo" />
+              <h5>3D Modeling (Beginner)</h5>
+            </div>
           </div>
         </div>
       </section>
@@ -164,26 +202,4 @@
             <input type="text" class="form-control" id="name" placeholder="Enter your name" />
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-danger">Send</button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Your Name - All Rights Reserved</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
-</html>
+            <label for="email" class="form-label
