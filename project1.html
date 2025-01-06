@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>template Theme</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #222;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #d1b873 !important; /* Light Gold */
+        }
+
+        .hero-section {
+            background: url('https://via.placeholder.com/1920x600/eeeeee/cccccc') no-repeat center center/cover;
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .hero-section .btn {
+            background-color: #d1b873; /* Light Gold */
+            border: none;
+            color: #222;
+        }
+
+        .hero-section .btn:hover {
+            background-color: #b0965c;
+        }
+
+        .features {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .features .feature {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .feature img {
+            max-width: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .cta-section h2 {
+            color: #d1b873; /* Light Gold */
+        }
+
+        .feedback-section {
+            padding: 4rem 0;
+            background-color: #f8f8f8;
+        }
+
+        .feedback-card {
+            background: white;
+            border: 1px solid #eaeaea;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .feedback-card img {
+            border-radius: 50%;
+            max-width: 80px;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 4rem 0;
+        }
+
+        footer h4 {
+            color: #d1b873;
+        }
+
+        footer a {
+            color: #d1b873;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+            color: #b0965c;
+        }
+
+        .gold-divider {
+            height: 4px;
+            background-color: #d1b873; /* Light Gold */
+            margin: 1rem auto;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Template</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="text-center">
+            <h1>Redefine Your Experience</h1>
+            <p class="lead">Unleash the power of mobile gaming on your PC</p>
+            <a href="#" class="btn btn-lg">Download Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 feature">
+                    <img src="https://via.placeholder.com/80" alt="Feature 1">
+                    <h5>Optimized Performance</h5>
+                    <p>Enjoy fast and smooth gameplay with our cutting-edge technology.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <img src="https://via.placeholder.com/80" alt="Feature 2">
+                    <h5>Custom Controls</h5>
+                    <p>Customize controls to suit your gaming preferences.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <img src="https://via.placeholder.com/80" alt="Feature 3">
+                    <h5>Wide Compatibility</h5>
+                    <p>Compatible with a wide range of games and applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>What Our Users Say</h2>
+                <div class="gold-divider"></div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="feedback-card">
+                        <img src="https://via.placeholder.com/80" alt="User 1">
+                        <p>"An incredible tool! It has completely changed the way I game."</p>
+                        <strong>- John Doe</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feedback-card">
+                        <img src="https://via.placeholder.com/80" alt="User 2">
+                        <p>"The performance is amazing, and the customization is spot on."</p>
+                        <strong>- Jane Smith</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feedback-card">
+                        <img src="https://via.placeholder.com/80" alt="User 3">
+                        <p>"Highly recommend it to all serious gamers out there."</p>
+                        <strong>- Alex Brown</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Support</h2>
+                <div class="gold-divider"></div>
+                <p>If you have any issues or need help, feel free to contact us. We're here to assist you 24/7.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Us</h4>
+                    <p>We are passionate about providing the best tools for gamers worldwide.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact</h4>
+                    <p>Email: Alivatra07@gmail.com</p>
+                    <p>Phone: +62 838 3892 1901</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <a href="#">Facebook</a><br>
+                    <a href="#">Twitter</a><br>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
