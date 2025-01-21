@@ -54,16 +54,6 @@
       footer a {
         color: #ff0000 !important;
       }
-      #start-form {
-        background-color: #f5f5f5;
-        padding: 2rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-      }
-      #start-form .btn-danger {
-        background-color: #ff0000;
-        border: none;
-      }
     </style>
   </head>
   <body>
@@ -91,28 +81,6 @@
       </div>
     </header>
 
-    <!-- Start Form Section -->
-    <section id="start-form" class="my-5 container">
-      <h2 class="text-center text-danger mb-4">Start Now</h2>
-      <form>
-        <div class="mb-3">
-          <label for="start-name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="start-name" placeholder="Enter your name" required />
-        </div>
-        <div class="mb-3">
-          <label for="start-email" class="form-label">Email Address</label>
-          <input type="email" class="form-control" id="start-email" placeholder="Enter your email" required />
-        </div>
-        <div class="mb-3">
-          <label for="start-message" class="form-label">Starting Message</label>
-          <textarea class="form-control" id="start-message" rows="4" placeholder="Write your message"></textarea>
-        </div>
-        <div class="mb-3">
-          <button type="submit" class="btn btn-danger w-100">Start Now</button>
-        </div>
-      </form>
-    </section>
-
     <main class="container my-5">
       <section id="about" class="mb-5">
         <h2 class="text-center text-danger mb-4">About Me</h2>
@@ -129,8 +97,109 @@
         </div>
       </section>
 
-      <!-- Remaining Content -->
+      <section id="projects" class="mb-5">
+        <h2 class="text-center text-danger mb-4">Projects</h2>
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card">
+                <a href="project1.html">
+                  <img src="project1.jpg" class="card-img-top" alt="Project 1" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Project 1</h5>
+                  <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <a href="project2.html">
+                  <img src="project2.jpg" class="card-img-top" alt="Project 2" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Project 2</h5>
+                  <p class="card-text">A dynamic web app developed using React.js.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <a href="project3.html">
+                  <img src="project3.jpg" class="card-img-top" alt="Project 3" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Project 3</h5>
+                  <p class="card-text">A robust back-end system created with Django.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
 
+   <section id="skills" class="mb-5">
+  <h2 class="text-center text-danger mb-4">Skills</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="skill-card">
+        <img src="html.png" alt="HTML Logo" />
+        <h5>HTML</h5>
+      </div>
+    </div>
+    <div class="col">
+      <div class="skill-card">
+        <img src="bootsrap.jpeg" alt="Bootstrap Logo" />
+        <h5>Bootstrap</h5>
+      </div>
+    </div>
+    <div class="col">
+      <div class="skill-card">
+        <img src="react.png" alt="React Logo" />
+        <h5>React.js</h5>
+      </div>
+    </div>
+    <div class="col">
+      <div class="skill-card">
+        <img src="django.png" alt="Django Logo" />
+        <h5>Django</h5>
+      </div>
+    </div>
+    <div class="col">
+      <div class="skill-card">
+        <img src="blender.png" alt="Blender Logo" />
+        <h5>3D Modeling (Blender)</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="contact" class="mb-5">
+        <h2 class="text-center text-danger mb-4">Contact Me</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger">Send</button>
+        </form>
+      </section>
     </main>
 
     <footer>
