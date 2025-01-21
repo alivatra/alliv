@@ -1,227 +1,35 @@
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Web Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        color: #333;
-      }
-      .navbar {
-        background-color: #002366;
-      }
-      .navbar-brand,
-      .nav-link {
-        color: white !important;
-      }
-      .hero-section {
-        background: linear-gradient(to right, #002366, #ff0000);
-        color: white;
-        padding: 5rem 0;
-        text-align: center;
-      }
-      .carousel-item img {
-        height: 400px;
-        object-fit: cover;
-      }
-      .card {
-        background-color: white;
-        border: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .skill-card {
-        text-align: center;
-        padding: 1rem;
-        border: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .skill-card img {
-        width: 50px;
-        margin-bottom: 0.5rem;
-      }
-      footer {
-        background-color: #002366;
-        color: white;
-        padding: 2rem 0;
-        text-align: center;
-      }
-      footer a {
-        color: #ff0000 !important;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="#">My Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </div>
+<section id="skills" class="mb-5">
+  <h2 class="text-center text-danger mb-4">Skills</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="skill-card">
+        <img src="html.png" alt="HTML Logo" />
+        <h5>HTML</h5>
       </div>
-    </nav>
-
-    <header class="hero-section">
-      <div class="container">
-        <h1 class="display-4">Hi, I'm a Web Developer</h1>
-        <p class="lead">I build modern and responsive websites using HTML, CSS, Bootstrap, React.js, and Django.</p>
+    </div>
+    <div class="col">
+      <div class="skill-card">
+        <img src="bootsrap.jpeg" alt="Bootstrap Logo" />
+        <h5>Bootstrap</h5>
       </div>
-    </header>
-
-    <main class="container my-5">
-      <section id="about" class="mb-5">
-        <h2 class="text-center text-danger mb-4">About Me</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <p>
-              I'm a passionate web developer with experience in front-end and back-end development. I love creating visually appealing and user-friendly websites for various clients. My goal is to
-              deliver high-quality solutions tailored to your needs.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <img src="profile.jpg" alt="Profile" class="img-fluid rounded shadow-sm" />
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="mb-5">
-        <h2 class="text-center text-danger mb-4">Projects</h2>
-        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="card">
-                <a href="project1.html">
-                  <img src="project1.jpg" class="card-img-top" alt="Project 1" />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Project 1</h5>
-                  <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card">
-                <a href="project2.html">
-                  <img src="project2.jpg" class="card-img-top" alt="Project 2" />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Project 2</h5>
-                  <p class="card-text">A dynamic web app developed using React.js.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card">
-                <a href="project3.html">
-                  <img src="project3.jpg" class="card-img-top" alt="Project 3" />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Project 3</h5>
-                  <p class="card-text">A robust back-end system created with Django.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-
-      <section id="skills" class="mb-5">
-        <h2 class="text-center text-danger mb-4">Skills</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="skill-card">
-              <img src="html-logo.png" alt="HTML Logo" />
-              <h5>HTML</h5>
-            </div>
-          </div>
-          <div class="col">
-            <div class="skill-card">
-              <img src="css-logo.png" alt="CSS Logo" />
-              <h5>CSS</h5>
-            </div>
-          </div>
-          <div class="col">
-            <div class="skill-card">
-              <img src="bootstrap-logo.png" alt="Bootstrap Logo" />
-              <h5>Bootstrap</h5>
-            </div>
-          </div>
-          <div class="col">
-            <div class="skill-card">
-              <img src="react-logo.png" alt="React Logo" />
-              <h5>React.js</h5>
-            </div>
-          </div>
-          <div class="col">
-            <div class="skill-card">
-              <img src="javascript-logo.png" alt="JavaScript Logo" />
-              <h5>JavaScript</h5>
-            </div>
-          </div>
-          <div class="col">
-            <div class="skill-card">
-              <img src="django-logo.png" alt="Django Logo" />
-              <h5>Django</h5>
-            </div>
-          </div>
-          <div class="col">
-            <div class="skill-card">
-              <img src="3d-modeling-logo.png" alt="3D Modeling Logo" />
-              <h5>3D Modeling (Beginner)</h5>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="mb-5">
-        <h2 class="text-center text-danger mb-4">Contact Me</h2>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name" />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-danger">Send</button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Your Name - All Rights Reserved</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
-</html>
+    </div>
+    <div class="col">
+      <div class="skill-card">
+        <img src="react.png" alt="React Logo" />
+        <h5>React.js</h5>
+      </div>
+    </div>
+    <div class="col">
+      <div class="skill-card">
+        <img src="django.png" alt="Django Logo" />
+        <h5>Django</h5>
+      </div>
+    </div>
+    <div class="col">
+      <div class="skill-card">
+        <img src="blender.png" alt="Blender Logo" />
+        <h5>3D Modeling (Blender)</h5>
+      </div>
+    </div>
+  </div>
+</section>
