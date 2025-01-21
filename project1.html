@@ -12,6 +12,24 @@
 
     <!-- Custom CSS -->
     <style>
+
+        .floating-btn {
+    position: fixed;
+    top: 80px; /* Di bawah navbar */
+    right: 20px; /* Jarak dari kanan */
+    z-index: 1000; /* Selalu di atas konten lain */
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background-color: #0056b3;
+}
+
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -158,6 +176,9 @@
         </div>
     </nav>
 
+    <!-- Floating Button -->
+    <a href="#" class="floating-btn btn btn-primary btn-sm">Back to Top</a>
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="text-center">
@@ -190,51 +211,8 @@
         </div>
     </section>
 
-    <!-- Feedback Section -->
-    <section class="feedback-section">
-        <div class="container">
-            <div class="text-center">
-                <h2>What Our Users Say</h2>
-                <div class="gold-divider"></div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="feedback-card">
-                        <img src="https://via.placeholder.com/80" alt="User 1">
-                        <p>"An incredible tool! It has completely changed the way I game."</p>
-                        <strong>- John Doe</strong>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feedback-card">
-                        <img src="https://via.placeholder.com/80" alt="User 2">
-                        <p>"The performance is amazing, and the customization is spot on."</p>
-                        <strong>- Jane Smith</strong>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feedback-card">
-                        <img src="https://via.placeholder.com/80" alt="User 3">
-                        <p>"Highly recommend it to all serious gamers out there."</p>
-                        <strong>- Alex Brown</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Rest of the Sections -->
 
-    <!-- Support Section -->
-    <section class="support-section">
-        <div class="container">
-            <div class="text-center">
-                <h2>Support</h2>
-                <div class="gold-divider"></div>
-                <p>If you have any issues or need help, feel free to contact us. We're here to assist you 24/7.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
@@ -260,5 +238,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 
 </html>
