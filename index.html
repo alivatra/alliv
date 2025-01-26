@@ -7,54 +7,233 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
     <style>
+      /* Global */
+      /* Global */
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        color: #333;
-      }
-      .navbar {
-        background-color: #002366;
-      }
-      .navbar-brand,
-      .nav-link {
-        color: white !important;
-      }
-      .hero-section {
-        background: linear-gradient(to right, #002366, #ff0000);
-        color: white;
-        padding: 5rem 0;
-        text-align: center;
-      }
-      .carousel-item img {
-        height: 400px;
-        object-fit: cover;
-      }
-      .card {
-        background-color: white;
-        border: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .skill-card {
-        text-align: center;
-        padding: 1rem;
-        border: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .skill-card img {
-        width: 50px;
-        margin-bottom: 0.5rem;
-      }
-      footer {
-        background-color: #002366;
-        color: white;
-        padding: 2rem 0;
-        text-align: center;
-      }
-      footer a {
-        color: #ff0000 !important;
-      }
+  font-family: Arial, sans-serif;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6); /* subtle inner shadow */
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(0, 26, 51, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6666 !important;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 102, 102, 0.8); /* subtle glow effect */
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+  color: #f0f0f0 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 102, 1);
+}
+
+.nav-link {
+  color: #f0f0f0 !important;
+  margin: 0 5px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* subtle glow effect */
+}
+
+.nav-link:hover {
+  color: #ff6666 !important;
+  border-bottom: 2px solid #ff6666;
+  text-shadow: 0 0 10px rgba(255, 102, 102, 1); /* glowing effect */
+}
+
+/* Hero Section */
+.hero-section {
+  background: rgba(0, 26, 51, 0.9);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-out;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* soft glow */
+}
+
+/* Cards */
+.card {
+  background-color: rgba(40, 41, 62, 0.9);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  color: #f0f0f0;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0.95; /* Slight transparency */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  opacity: 1; /* Full opacity on hover */
+}
+
+.card-body {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Subtle glow effect on text */
+}
+
+/* Skill Cards */
+.skill-card {
+  text-align: center;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(40, 41, 62, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  height: 180px; /* Disesuaikan agar lebih kecil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0.95;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  opacity: 1; /* Full opacity on hover */
+}
+
+.skill-card img {
+  width: 60px;
+  margin-bottom: 0.8rem;
+  filter: brightness(1.2); /* Slightly brighten images */
+}
+
+.skill-card h5 {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+/* Carousel */
+.carousel-inner {
+  max-height: 300px; /* Setengah dari ukuran sebelumnya */
+  max-width: 50%; /* Menambahkan lebar setengah dari ukuran sebelumnya */
+  margin: 0 auto; /* Centering carousel */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 300px; /* Menyesuaikan dengan ukuran carousel */
+  object-fit: cover;
+}
+
+/* Carousel Container */
+.carousel {
+  position: relative;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+/* Ikon panah */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 2rem;
+}
+
+/* Efek hover yang lebih sederhana */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #ff6666; /* Warna saat hover */
+}
+
+
+
+
+/* Form */
+form {
+  max-width: 450px; /* Setengah dari lebar sebelumnya */
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: rgba(40, 41, 62, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%; /* Memastikan lebar input dan tombol sesuai dengan form */
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 102, 102, 0.8); /* Soft glow effect */
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #ff6666;
+  box-shadow: 0 0 8px rgba(255, 102, 102, 0.5);
+}
+
+form button {
+  background-color: #660000;
+  border: 2px solid #ff6666;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Subtle glow effect */
+}
+
+form button:hover {
+  background-color: #990000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 26, 51, 0.8);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+  color: #ff6666 !important;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #f0f0f0 !important;
+}
+
+
     </style>
+    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg shadow-sm">
@@ -84,68 +263,92 @@
     <main class="container my-5">
       <section id="about" class="mb-5">
         <h2 class="text-center text-danger mb-4">About Me</h2>
-        <div class="row">
+        <div class="row align-items-center">
+          <!-- Left Column with Text -->
           <div class="col-md-6">
-            <p>
-              I'm a passionate web developer with experience in front-end and back-end development. I love creating visually appealing and user-friendly websites for various clients. My goal is to
-              deliver high-quality solutions tailored to your needs.
-            </p>
+            <div class="card shadow-lg" style="border-radius: 12px;">
+              <div class="card-body">
+                <h5 class="card-title text-center text-primary mb-3">Hi, I'm Alliv Atra Wibawa</h5>
+                <p class="card-text">
+                  I'm a passionate web developer with experience in both front-end and back-end development. I specialize in building responsive and user-friendly websites using modern technologies. My goal is to create high-quality, scalable web solutions tailored to your business needs.
+                </p>
+                <ul class="list-unstyled">
+                  <li><strong>Skills:</strong> HTML, CSS, JavaScript, React.js, Django</li>
+                  <li><strong>Hobbies:</strong> 3D Modeling, Gaming, Reading</li>
+                  <li><strong>Contact:</strong> alivatra07@gmail.com</li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <!-- Right Column with Image -->
           <div class="col-md-6">
-            <img src="profile.jpg" alt="Profile" class="img-fluid rounded shadow-sm" />
+            <div class="card shadow-lg" style="border-radius: 12px;">
+              <div class="card-body text-center">
+                <img src="profil.jpg" alt="Profile" class="img-fluid rounded-circle shadow-sm" style="max-width: 250px; object-fit: cover; margin-top: 20px;" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
+    </main>
+    
 
-      <section id="projects" class="mb-5">
-        <h2 class="text-center text-danger mb-4">Projects</h2>
-        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="card">
-                <a href="project1.html">
-                  <img src="project1.jpg" class="card-img-top" alt="Project 1" />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Project 1</h5>
-                  <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card">
-                <a href="project2.html">
-                  <img src="project2.jpg" class="card-img-top" alt="Project 2" />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Project 2</h5>
-                  <p class="card-text">A dynamic web app developed using React.js.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card">
-                <a href="project3.html">
-                  <img src="project3.jpg" class="card-img-top" alt="Project 3" />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Project 3</h5>
-                  <p class="card-text">A robust back-end system created with Django.</p>
-                </div>
+    <section id="projects" class="mb-5">
+      <h2 class="text-center text-danger mb-4">Projects</h2>
+      <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Carousel Item 1 -->
+          <div class="carousel-item active">
+            <div class="card">
+              <a href="project1.html">
+                <img src="project1.jpg" class="card-img-top" alt="Project 1" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+    
+          <!-- Carousel Item 2 -->
+          <div class="carousel-item">
+            <div class="card">
+              <a href="project2.html">
+                <img src="project2.jpg" class="card-img-top" alt="Project 2" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Project 2</h5>
+                <p class="card-text">A dynamic web app developed using React.js.</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Carousel Item 3 -->
+          <div class="carousel-item">
+            <div class="card">
+              <a href="project3.html">
+                <img src="project3.jpg" class="card-img-top" alt="Project 3" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Project 3</h5>
+                <p class="card-text">A robust back-end system created with Django.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-
+    
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    
    <section id="skills" class="mb-5">
   <h2 class="text-center text-danger mb-4">Skills</h2>
   <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -182,24 +385,25 @@
   </div>
 </section>
 
-      <section id="contact" class="mb-5">
-        <h2 class="text-center text-danger mb-4">Contact Me</h2>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name" />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-danger">Send</button>
-        </form>
-      </section>
+<section id="contact" class="mb-5">
+  <h2 class="text-center text-danger mb-4">Contact Me</h2>
+  <form action="mailto:alivatra07@gmail.com" method="POST" enctype="text/plain">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter your message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-danger">Send</button>
+  </form>
+</section>
+
     </main>
 
     <footer>
