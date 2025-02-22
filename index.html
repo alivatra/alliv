@@ -1,419 +1,476 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Web Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-      /* Global */
-      /* Global */
-      body {
-  font-family: Arial, sans-serif;
-  background: url('bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #f0f0f0;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6); /* subtle inner shadow */
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            text-align: center;
+        }
 
-/* Navbar */
-.navbar {
-  background-color: rgba(0, 26, 51, 0.8);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
+        .hero-section {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 350px 0; 
+            text-align: center;
+        }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ff6666 !important;
-  transition: transform 0.3s ease, color 0.3s ease;
-  text-shadow: 0 0 5px rgba(255, 102, 102, 0.8); /* subtle glow effect */
-}
+        .hero-section h1 {
+            font-size: 56px;
+            font-weight: 700;
+        }
 
-.navbar-brand:hover {
-  transform: scale(1.1);
-  color: #f0f0f0 !important;
-  text-shadow: 0 0 10px rgba(255, 102, 102, 1);
-}
+        .hero-section p {
+            font-size: 24px;
+            color: white;
+        }
 
-.nav-link {
-  color: #f0f0f0 !important;
-  margin: 0 5px;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* subtle glow effect */
-}
+        .btn-primary {
+            background-color: #0071e3;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.nav-link:hover {
-  color: #ff6666 !important;
-  border-bottom: 2px solid #ff6666;
-  text-shadow: 0 0 10px rgba(255, 102, 102, 1); /* glowing effect */
-}
+        .btn-primary:hover {
+            background-color: #005bb5;
+            transform: translateY(-3px);
+        }
 
-/* Hero Section */
-.hero-section {
-  background: rgba(0, 26, 51, 0.9);
-  color: white;
-  padding: 5rem 0;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 1.5s ease-out;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* soft glow */
-}
+        .card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-/* Cards */
-.card {
-  background-color: rgba(40, 41, 62, 0.9);
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  color: #f0f0f0;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0.95; /* Slight transparency */
-}
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-  opacity: 1; /* Full opacity on hover */
-}
+        .skill-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: 0.3s;
+            margin-bottom: 20px;
+        }
 
-.card-body {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Subtle glow effect on text */
-}
+        .skill-card h5 {
+            margin-bottom: 5px;
+        }
 
-/* Skill Cards */
-.skill-card {
-  text-align: center;
-  padding: 1.5rem;
-  border: none;
-  border-radius: 12px;
-  background-color: rgba(40, 41, 62, 0.9);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  height: 180px; /* Disesuaikan agar lebih kecil */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0.95;
-}
+        .skill-progress {
+            background-color: #f0f0f0;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-.skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-  opacity: 1; /* Full opacity on hover */
-}
+        .skill-progress-bar {
+            background-color: #0071e3;
+            height: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.skill-card img {
-  width: 60px;
-  margin-bottom: 0.8rem;
-  filter: brightness(1.2); /* Slightly brighten images */
-}
+        .skill-card img {
+            width: 50px;
+            margin-bottom: 10px;
+            align-self: center;
+        }
 
-.skill-card h5 {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Glow effect */
-}
+        footer {
+            padding: 50px 0;
+            background: #1d1d1f;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
 
-/* Carousel */
-.carousel-inner {
-  max-height: 300px; /* Setengah dari ukuran sebelumnya */
-  max-width: 50%; /* Menambahkan lebar setengah dari ukuran sebelumnya */
-  margin: 0 auto; /* Centering carousel */
-}
+        .footer-left {
+            text-align: left;
+        }
 
-.carousel-item img {
-  width: 100%;
-  height: 300px; /* Menyesuaikan dengan ukuran carousel */
-  object-fit: cover;
-}
+        .footer-left h5 {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
 
-/* Carousel Container */
-.carousel {
-  position: relative;
-}
+        .footer-left a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
 
-/* Carousel Controls */
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  z-index: 10;
-}
+        .footer-right {
+            text-align: left;
+        }
 
-.carousel-control-prev {
-  left: 10px;
-}
+        .social {
+            text-align: left;
+        }
 
-.carousel-control-next {
-  right: 10px;
-}
+        .social a {
+            display: inline-block;
+            margin: 0 10px;
+        }
 
-/* Ikon panah */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  font-size: 2rem;
-}
+        .social i {
+            font-size: 1.5em; /* Ukuran ikon diperkecil */
+            margin-right: 10px;
+            color: white;
+        }
 
-/* Efek hover yang lebih sederhana */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  color: #ff6666; /* Warna saat hover */
-}
+        .nav-custom {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
+        .nav-custom a {
+            color: #1d1d1f;
+            font-weight: bold;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
+        .nav-custom a:hover {
+            color: #0071e3;
+        }
 
+        .carousel-inner {
+            max-width: 100%;
+            margin: 0 auto;
+        }
 
-/* Form */
-form {
-  max-width: 450px; /* Setengah dari lebar sebelumnya */
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 12px;
-  background-color: rgba(40, 41, 62, 0.9);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
+        .carousel-item img {
+            height: 200px;
+            object-fit: cover;
+        }
 
-form input,
-form textarea,
-form button {
-  width: 100%; /* Memastikan lebar input dan tombol sesuai dengan form */
-  margin-bottom: 1rem;
-  padding: 0.8rem;
-  border-radius: 12px;
-  transition: box-shadow 0.3s ease;
-  box-shadow: 0 0 5px rgba(255, 102, 102, 0.8); /* Soft glow effect */
-}
+        .carousel-control-prev,
+        .carousel-control-next {
+            height: 250px;
+        }
 
-form input:focus,
-form textarea:focus {
-  border-color: #ff6666;
-  box-shadow: 0 0 8px rgba(255, 102, 102, 0.5);
-}
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+        }
 
-form button {
-  background-color: #660000;
-  border: 2px solid #ff6666;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Subtle glow effect */
-}
+        form input,
+        form textarea {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
 
-form button:hover {
-  background-color: #990000;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Footer */
-footer {
-  background-color: rgba(0, 26, 51, 0.8);
-  color: white;
-  padding: 2rem 0;
-  text-align: center;
-  border-radius: 12px 12px 0 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-footer a {
-  color: #ff6666 !important;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  color: #f0f0f0 !important;
-}
-
-
+        form textarea {
+            rows: 3;
+        }
     </style>
-    
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="#">My Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
+</head>
+
+<body>
+    <nav class="nav-custom d-flex justify-content-center">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <header class="hero-section">
-      <div class="container">
-        <h1 class="display-4">Hi, I'm a Web Developer</h1>
-        <p class="lead">I build modern and responsive websites using HTML, CSS, Bootstrap, React.js, and Django.</p>
-      </div>
+        <h1>Hi, I'm a Web Developer</h1>
+        <p>I build modern and responsive websites using HTML, CSS, Bootstrap, React.js, and Django.</p>
+        <a href="#projects" class="btn btn-primary">See My Projects</a>
     </header>
 
     <main class="container my-5">
-      <section id="about" class="mb-5">
-        <h2 class="text-center text-danger mb-4">About Me</h2>
-        <div class="row align-items-center">
-          <!-- Left Column with Text -->
-          <div class="col-md-6">
-            <div class="card shadow-lg" style="border-radius: 12px;">
-              <div class="card-body">
-                <h5 class="card-title text-center text-primary mb-3">Hi, I'm Alliv Atra Wibawa</h5>
-                <p class="card-text">
-                  I'm a passionate web developer with experience in both front-end and back-end development. I specialize in building responsive and user-friendly websites using modern technologies. My goal is to create high-quality, scalable web solutions tailored to your business needs.
-                </p>
-                <ul class="list-unstyled">
-                  <li><strong>Skills:</strong> HTML, CSS, JavaScript, React.js, Django</li>
-                  <li><strong>Hobbies:</strong> 3D Modeling, Gaming, Reading</li>
-                  <li><strong>Contact:</strong> alivatra07@gmail.com</li>
-                </ul>
-              </div>
+        <section id="about" class="mb-5">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="card p-4">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="profil.jpg" alt="Profile" class="img-fluid rounded-circle"
+                            style="max-width: 200px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-8">
+                      <div style="margin-top: 20px;">
+                        <h5 class="card-title mb-3">Hi, I'm Alliv Atra Wibawa</h5>
+                        <p class="card-text text-start">
+                            I'm a passionate web developer with experience in both front-end and back-end
+                            development. I specialize in building responsive and user-friendly websites using
+                            modern technologies. My goal is to create high-quality, scalable web solutions
+                            tailored to your business needs.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><strong>Skills:</strong> HTML, CSS, JavaScript, React.js, Django</li>
+                            <li><strong>Hobbies:</strong> 3D Modeling, Gaming, Reading</li>
+                            <li><strong>Contact:</strong> alivatra07@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- Right Column with Image -->
-          <div class="col-md-6">
-            <div class="card shadow-lg" style="border-radius: 12px;">
-              <div class="card-body text-center">
-                <img src="profil.jpg" alt="Profile" class="img-fluid rounded-circle shadow-sm" style="max-width: 250px; object-fit: cover; margin-top: 20px;" />
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-    </main>
-    
+    </section>
 
     <section id="projects" class="mb-5">
-      <h2 class="text-center text-danger mb-4">Projects</h2>
-      <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <!-- Carousel Item 1 -->
-          <div class="carousel-item active">
-            <div class="card">
-              <a href="project1.html">
-                <img src="project1.jpg" class="card-img-top" alt="Project 1" />
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">Project 1</h5>
-                <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
-              </div>
+        <h2 class="text-center mb-4">Projects</h2>
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="project1.html">
+                                    <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 1</h5>
+                                    <p class="card-text">A responsive website built with HTML, CSS, and Bootstrap.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="project2.html">
+                                    <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 2</h5>
+                                    <p class="card-text">A dynamic web app developed using React.js.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="project3.html">
+                                    <img src="project3.jpg" class="card-img-top" alt="Project 3">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 3</h5>
+                                    <p class="card-text">A robust back-end system created with Django.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="project4.html">
+                                    <img src="project4.jpg" class="card-img-top" alt="Project 4">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 4</h5>
+                                    <p class="card-text">Another project description.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="project5.html">
+                                    <img src="project5.jpg" class="card-img-top" alt="Project 5">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 5</h5>
+                                    <p class="card-text">Another project description.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="project6.html">
+                                    <img src="project6.jpg" class="card-img-top" alt="Project 6">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 6</h5>
+                                    <p class="card-text">Another project description.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="project7.html">
+                                    <img src="project7.jpg" class="card-img-top" alt="Project 7">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 7</h5>
+                                    <p class="card-text">Another project description.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="project8.html">
+                                    <img src="project8.jpg" class="card-img-top" alt="Project 8">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 8</h5>
+                                    <p class="card-text">Another project description.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-    
-          <!-- Carousel Item 2 -->
-          <div class="carousel-item">
-            <div class="card">
-              <a href="project2.html">
-                <img src="project2.jpg" class="card-img-top" alt="Project 2" />
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">Project 2</h5>
-                <p class="card-text">A dynamic web app developed using React.js.</p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Carousel Item 3 -->
-          <div class="carousel-item">
-            <div class="card">
-              <a href="project3.html">
-                <img src="project3.jpg" class="card-img-top" alt="Project 3" />
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">Project 3</h5>
-                <p class="card-text">A robust back-end system created with Django.</p>
-              </div>
-            </div>
-          </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     </section>
-    
-   <section id="skills" class="mb-5">
-  <h2 class="text-center text-danger mb-4">Skills</h2>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="skill-card">
-        <img src="html.png" alt="HTML Logo" />
-        <h5>HTML</h5>
-      </div>
-    </div>
-    <div class="col">
-      <div class="skill-card">
-        <img src="bootsrap.jpeg" alt="Bootstrap Logo" />
-        <h5>Bootstrap</h5>
-      </div>
-    </div>
-    <div class="col">
-      <div class="skill-card">
-        <img src="react.png" alt="React Logo" />
-        <h5>React.js</h5>
-      </div>
-    </div>
-    <div class="col">
-      <div class="skill-card">
-        <img src="django.png" alt="Django Logo" />
-        <h5>Django</h5>
-      </div>
-    </div>
-    <div class="col">
-      <div class="skill-card">
-        <img src="blender.png" alt="Blender Logo" />
-        <h5>3D Modeling (Blender)</h5>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="contact" class="mb-5">
-  <h2 class="text-center text-danger mb-4">Contact Me</h2>
-  <form action="mailto:alivatra07@gmail.com" method="POST" enctype="text/plain">
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required />
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter your message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-danger">Send</button>
-  </form>
-</section>
+    <section id="skills" class="mb-5">
+        <h2 class="text-center mb-4">Skills</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="skill-card">
+                    <img src="html.png" alt="HTML Logo">
+                    <h5>HTML</h5>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skill-card">
+                    <img src="bootsrap.jpeg" alt="Bootstrap Logo">
+                    <h5>Bootstrap</h5>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skill-card">
+                    <img src="react.png" alt="React Logo">
+                    <h5>React.js</h5>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skill-card">
+                    <img src="django.png" alt="Django Logo">
+                    <h5>Django</h5>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 70%;">70%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skill-card">
+                    <img src="blender.png" alt="Blender Logo">
+                    <h5>3D Modeling (Blender)</h5>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 60%;">60%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </main>
+</main>
 
-    <footer>
-      <p>&copy; 2025 Your Name - All Rights Reserved</p>
+<footer>
+    <div class="footer-left">
+        <h5>INFO</h5>
+        <a href="#">Formats</a>
+        <a href="#">Compression</a>
+        <a href="#">Pricing</a>
+        <a href="#">FAQ</a>
+        <a href="#">Status</a>
+    </div>
+    <div class="footer-left">
+        <h5>RESOURCES</h5>
+        <a href="#">Developer API</a>
+        <a href="#">Tools</a>
+        <a href="#">Blog</a>
+        </div>
+        <div class="footer-left">
+            <h5>COMPANY</h5>
+            <a href="#">About Us</a>
+            <a href="#">Sustainability</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="footer-right">
+            <div style="text-align: right;">
+                <form action="mailto:alivatra07@gmail.com" method="POST" enctype="text/plain">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"
+                            placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+            <div class="social">
+                <label>Follow us</label>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
+        const projectCarousel = new bootstrap.Carousel(document.getElementById('projectCarousel'), {
+            interval: 3000,
+            wrap: false
+        });
     </script>
-  </body>
+</body>
 </html>
